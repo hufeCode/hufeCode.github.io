@@ -1,0 +1,349 @@
+/*font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: rgb(97, 97, 97);
+    opacity: 0.9;
+    font-size: 16px;
+    width: 100%;
+}
+
+/*1. Header styling*/
+
+nav {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    background-color:  white;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+#logo {
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid rgb(97, 97, 97);;
+    padding: 0 0.5rem ;
+    margin: 0 0.5rem;
+    font-size: 2rem;
+}
+
+#logo h1 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: inline-flex;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+}
+
+.dropdown {
+    display: none;
+}
+
+/*to change the menu to a dropdown menu for small screens*/
+@media only screen and (max-width: 720px) {
+    .dropdown {
+        float: left;
+        display: block;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 1.75rem;
+        border: none;
+        outline: none;
+        color: rgb(97, 97, 97);
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: 'Lora', serif; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: rgb(97, 97, 97);;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-family: 'Lora', serif;
+        font-size: 1.5rem;
+    }
+
+    .dropdown-content a:hover {
+        color: rgb(163, 149, 149);
+      }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    ul {
+        display: none;
+    }
+}
+
+/*2. Hero styling*/
+
+main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#hero-container {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5rem 0 2rem 0;
+}
+
+#hero-img-container {
+    background-image: url(../img/camera.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 75rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#hero-text-container {
+    height: auto;
+    width: 100%;
+    background: white;
+    opacity: 0.9;
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    padding: 1rem; 
+}
+
+#hero-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#hero-container p{
+    font-family: 'Lora', serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/*3. Portfolio styling*/
+
+#portfolio-container {
+    width: 100%
+}
+
+#title {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 5rem 0 2rem 0;
+}
+
+#s-tile-container {
+    max-width: 75rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.s-tile {
+    width: 31%;
+    padding: 0.25rem;
+    margin: 0.2rem 0.2rem;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 0.5rem;
+}
+
+.s-tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.s-tile a {
+    text-decoration: none;
+}
+
+.s-tile p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: 'Lora', serif;
+    text-align: center;
+    color: rgb(97, 97, 97); 
+}
+
+.s-tile a:hover {
+    color:rgb(163, 149, 149);
+}
+
+/*4. Team styling*/
+
+#team-container {
+    width: 100%;
+}
+
+#t-tile-container{
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.t-tile {
+    width: 35%;
+    padding: 0.25rem;
+    margin: 0.2rem 0.2rem;
+}
+
+.t-tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.t-tile p {
+    font-size: 1.25rem;
+    font-family: 'Lora', serif;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+    margin: 0;
+}
+
+.t-tile .name {
+    font-size: 2rem; 
+}
+
+/*5. Location styling*/
+
+#location-container {
+    width: 100%;
+}
+
+#location-container p {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;;
+    text-align: center;
+    margin: 0; 
+}
+
+#location-text-container {
+    margin-bottom: 0.5rem;
+}
+
+#location-map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#location-map-container img {
+    border-radius: 0.5rem;
+    max-width: 75rem;
+    width: 80%;
+    height: auto;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 0.25rem;
+    margin: 0 auto;
+}
+
+/*6. Contact bar styling*/
+
+#contact-container {
+    width: 100%;
+}
+
+#contact-bar {
+    /*border: 1px solid red;*/
+    width: 100%;
+    
+}
+
+#contact-bar .contact-bar-item {
+    width: 100%;
+    /*border: 1px solid green;*/
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.contact-bar-item p {
+    /*border: 1px solid blue;*/
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+    padding-left: 0.5rem;
+}
+
+.fa {
+    color:rgb(212, 212, 212);
+    /*border: 1px solid purple;*/
+    padding: 0;
+    margin: 0;
+}
+
+/*7.Footer styling*/
+
+footer {
+    padding-top: 5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: 'Lora', serif;
+    color:rgb(97, 97, 97);
+}
+
